@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  /* text-align: center; */
+  font-family: "Open Sans", sans-serif;
+}
+
+.grid-wrapper {
+  display: grid;
+  /* grid-template-columns: 30% 20% 50%; */
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 0.5fr auto auto 1fr;
+  gap: 1em;
+  max-width: 960px;
+  margin: 0 auto;
+  grid-template-areas:
+    "header header header header header" /* 1 */
+    "main main main main main"
+    "projects projects projects projects projects"
+    "footer footer footer footer footer";
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "home . . . projects";
+  grid-area: header;
+  padding: 1em;
+}
+
+header > a {
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.navlink {
+  border-bottom: 3px solid #ff4500;
+}
+
+.navlink:hover {
+  text-decoration: none;
+
+  border-bottom: 3px solid #ff4500;
+}
+
+header > a:visited {
+  color: #000;
+}
+
+.projectnav {
+  grid-area: projects;
+  text-align: end;
+}
+
+/* Main Content */
+.main {
+  grid-area: main;
+  padding: 2em;
+
+  font-family: "Raleway", sans-serif;
+}
+
+.main p {
+  font-size: 1.4em;
+}
+
+.main p span {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+}
+
+.main p .underline {
+  border-bottom: 3px solid #ff4500;
+  font-size: 1em;
+}
+
+.fadeText {
+  color: #aaa;
+}
+
+/* End main */
+
+.projs h2 {
+  text-align: center;
+}
+
+.underlineTitle {
+  border-bottom: 3px solid #ff4500;
+}
+
+.projects {
+  grid-area: projects;
+  padding: 2em;
+  background-color: #eee;
+}
+
+.projects .titleProjs {
+  font-size: 1.4em;
+  color: #555;
+}
+
+.buttons {
+  text-align: center;
+}
+
+button {
+  padding: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 2em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .grid-wrapper {
+    grid-template-rows: 0.5fr 4fr auto 1fr 1fr;
+  }
+
+  header {
+    padding: 1em;
+  }
+
+  .main span {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: "Raleway", sans-serif;
+  }
+}
