@@ -9,7 +9,7 @@ html {
 body {
   background-color: #fff;
   /* text-align: center; */
-  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .grid-wrapper {
@@ -90,6 +90,10 @@ header > a:visited {
 
 /* End main */
 
+.projs {
+  text-align: center;
+}
+
 .projs h2 {
   text-align: center;
 }
@@ -114,7 +118,20 @@ header > a:visited {
 }
 
 button {
-  padding: 1em;
+  padding: 1em 2em;
+  font-size: 1em;
+  letter-spacing: 1px;
+  border: orangered 2px solid;
+  border-radius: 5px;
+  box-shadow: rgba(255, 68, 0, 0.562) 2px 5px 5px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: orangered;
+  transition: ease 0.5s;
+  color: #fff;
 }
 
 img {
@@ -139,5 +156,9 @@ img {
     font-size: 1.5em;
     font-weight: bold;
     font-family: "Raleway", sans-serif;
+  }
+
+  button {
+    margin: 0 2em;
   }
 }
